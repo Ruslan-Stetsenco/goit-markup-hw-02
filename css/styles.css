@@ -12,9 +12,9 @@
 body {
   font-family: 'Roboto', 'Raleway';
   letter-spacing: 0.03em;
-  background-color: #ffffff;
+  background-color: var(--background-card-team);
   font-size: 14px;
-  /* Как задать цвет шрифта color: #212121; */
+  color: var(--main-text-color);
 }
 .background-decision {
   background-color: var(--color-background);
@@ -71,21 +71,26 @@ body {
   text-decoration: none;
 }
 
+.link:hover,
+.link:focus {
+  color: var(--brand-color);
+}
+
 .current {
   color: var(--brand-color);
 }
 
-.link-contact {
-  font-weight: 500;
+.contact {
+  font-weight: 400;
   font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--second-text-color);
+  line-height: 24px;
+  color: #ffffff99;
+  font-style: normal;
   text-decoration: none;
 }
 
-.link-list :hover,
-.link-list :focus {
+.contact:hover,
+.contact:focus {
   color: var(--brand-color);
 }
 
@@ -98,16 +103,39 @@ body {
   text-decoration: none;
 }
 
-.link-list-contact {
-  font-weight: 400;
+/* контакты шапка */
+.list-contact {
+  font-weight: 500;
   font-size: 14px;
-  line-height: 24px;
-  color: #ffffff99;
-  font-style: normal;
-  text-decoration: none;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.title-litle {
+  /* font-weight: 700; */
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+.title-very-small {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--second-text-color);
 }
 
 .button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
   background: var(--brand-color);
   color: var(--background-card-team);
 }
@@ -121,7 +149,7 @@ body {
 .title-peculiarities {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14px;
+  line-height: 1.14;
   text-transform: uppercase;
   color: var(--main-text-color);
 }
@@ -130,15 +158,10 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  color: #757575;
+  color: var(--second-text-color);
 }
-
-.link-list,
-.text-peculiarities,
-.our-work,
-.cards-team,
-.filter,
-.cards {
+/* удаление маркера */
+.point {
   list-style-type: none;
 }
 
@@ -157,9 +180,11 @@ body {
   background-color: var(--brand-color);
   color: var(--background-card-team);
 }
+
 .button-filter:hover,
 .button-filter:focus {
   background-color: var(--hever-button-color);
+  color: var(--background-card-team);
 }
 
 .title-cards {
@@ -177,4 +202,17 @@ body {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
